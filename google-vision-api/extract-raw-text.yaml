@@ -1,0 +1,12 @@
+name: Extract Raw Text
+method: POST
+url: http://localhost:5000/get-text
+body:
+  type: form-data
+  content: |-
+    [
+      {
+        "key": "image",
+        "value": ""
+      }
+    ]

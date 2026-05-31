@@ -1,0 +1,136 @@
+{
+  "info": {
+    "_postman_id": "2c4552d6-bed4-4e15-b90c-74e5efd48555",
+    "name": "Google Vision API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36633056"
+  },
+  "item": [
+    {
+      "name": "Extract Raw Text",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "2b9d67d9-7626-43ce-8596-c12058e19047",
+              "src": "/D:/Codetroon/Boltpart/Emirates ID Sample/1.jpeg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/get-text",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "get-text"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Extract Structured Front Side Data From Emirates ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "2b9d67d9-7626-43ce-8596-c12058e19047",
+              "src": "/D:/Codetroon/Boltpart/Emirates ID Sample/1.jpeg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/get-frontside-data",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "get-frontside-data"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Validate Emirates ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "frontImage",
+              "type": "file",
+              "uuid": "2b9d67d9-7626-43ce-8596-c12058e19047",
+              "src": "/D:/Codetroon/Boltpart/Emirates ID Sample/1.jpeg"
+            },
+            {
+              "key": "backImage",
+              "type": "file",
+              "uuid": "80eafc20-c62c-47ea-816e-8e071666310c",
+              "src": "/D:/Codetroon/Boltpart/Emirates ID Sample/2.jpeg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/validate-emirates-id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "validate-emirates-id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Extract Structured Back Side Data From Emirates ID Copy",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "2b9d67d9-7626-43ce-8596-c12058e19047",
+              "src": "/D:/Codetroon/Boltpart/Emirates ID Sample/2.jpeg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/get-backside-data",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "get-backside-data"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+name: Validate Emirates ID
+method: POST
+url: http://localhost:5000/validate-emirates-id
+body:
+  type: form-data
+  content: |-
+    [
+      {
+        "key": "frontImage",
+        "value": ""
+      },
+      {
+        "key": "backImage",
+        "value": ""
+      }
+    ]
